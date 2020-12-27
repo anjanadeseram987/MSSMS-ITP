@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0839402-26F7-4464-B751-C6BFA28F87CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MSSMS</RootNamespace>
+    <AssemblyName>MSSMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2DBIG.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Gmail.v1, Version=1.49.0.2055, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Gmail.v1.1.49.0.2055\lib\net45\Google.Apis.Gmail.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Konscious.Security.Cryptography.Argon2, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Konscious.Security.Cryptography.Argon2.1.2.1\lib\net46\Konscious.Security.Cryptography.Argon2.dll</HintPath>
+    </Reference>
+    <Reference Include="Konscious.Security.Cryptography.Blake2, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Konscious.Security.Cryptography.Blake2.1.0.9\lib\net46\Konscious.Security.Cryptography.Blake2.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.1.2\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartments.Designer.cs">
+      <DependentUpon>AddDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDesignations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDesignations.Designer.cs">
+      <DependentUpon>AddDesignations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFinishedGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFinishedGoods.Designer.cs">
+      <DependentUpon>AddFinishedGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIssue.Designer.cs">
+      <DependentUpon>AddIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddItemsToStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemsToStore.Designer.cs">
+      <DependentUpon>AddItemsToStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMachines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMachines.Designer.cs">
+      <DependentUpon>AddMachines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMaintenancePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMaintenancePlan.Designer.cs">
+      <DependentUpon>AddMaintenancePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewBrand.Designer.cs">
+      <DependentUpon>AddNewBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewBuyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewBuyer.Designer.cs">
+      <DependentUpon>AddNewBuyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrderItemContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrderItemContents.Designer.cs">
+      <DependentUpon>AddOrderItemContents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewOrder.Designer.cs">
+      <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewTask.Designer.cs">
+      <DependentUpon>AddNewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProductionPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductionPlan.Designer.cs">
+      <DependentUpon>AddProductionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddShippingSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddShippingSchedules.Designer.cs">
+      <DependentUpon>AddShippingSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeabagMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeabagMaterial.Designer.cs">
+      <DependentUpon>AddTeabagMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeaProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeaProducts.Designer.cs">
+      <DependentUpon>AddTeaProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLobby.Designer.cs">
+      <DependentUpon>AdminLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLobbyChild.Designer.cs">
+      <DependentUpon>AdminLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppearanceSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppearanceSettings.Designer.cs">
+      <DependentUpon>AppearanceSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignTask.Designer.cs">
+      <DependentUpon>AssignTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionSettings.Designer.cs">
+      <DependentUpon>ConnectionSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizedControls\CircularPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBHandler\BuyerDBHandler.cs" />
+    <Compile Include="DBHandler\DBHandler.cs" />
+    <Compile Include="DBHandler\DeptDBHandler.cs" />
+    <Compile Include="DBHandler\DesigDBHandler.cs" />
+    <Compile Include="DBHandler\EmployeeDBHandler.cs" />
+    <Compile Include="DBHandler\FinishedGoodsDBHandler.cs" />
+    <Compile Include="DBHandler\LobbyDBHandler.cs" />
+    <Compile Include="DBHandler\LoginHandler.cs" />
+    <Compile Include="DBHandler\ProductionDBHandler.cs" />
+    <Compile Include="DBHandler\MachineryDBHandler.cs" />
+    <Compile Include="DBHandler\ReportsDBHandler.cs" />
+    <Compile Include="DBHandler\ShippingDBHandler.cs" />
+    <Compile Include="DBHandler\StoreDBHandler.cs" />
+    <Compile Include="DBHandler\TaskDBHandler.cs" />
+    <Compile Include="DBHandler\OrderDBHandler.cs" />
+    <Compile Include="DBHandler\TeaProductDBHandler.cs" />
+    <Compile Include="DBHandler\UserAccountDBHandler.cs" />
+    <Compile Include="EditConnectionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditConnectionSettings.Designer.cs">
+      <DependentUpon>EditConnectionSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ChildFormType.cs" />
+    <Compile Include="Enums\NotificationType.cs" />
+    <Compile Include="Enums\SessionState.cs" />
+    <Compile Include="Enums\ReportType.cs" />
+    <Compile Include="Enums\UserAccountState.cs" />
+    <Compile Include="Enums\UserInterface.cs" />
+    <Compile Include="HRLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRLobbyChild.Designer.cs">
+      <DependentUpon>HRLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueGoods.Designer.cs">
+      <DependentUpon>IssueGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceLobbyChild.Designer.cs">
+      <DependentUpon>MaintenanceLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAssignedTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAssignedTasks.Designer.cs">
+      <DependentUpon>ManageAssignedTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBrands.Designer.cs">
+      <DependentUpon>ManageBrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBuyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBuyers.Designer.cs">
+      <DependentUpon>ManageBuyers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCargoLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCargoLoading.Designer.cs">
+      <DependentUpon>ManageCargoLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDepts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDepts.Designer.cs">
+      <DependentUpon>ManageDepts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDesigs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDesigs.Designer.cs">
+      <DependentUpon>ManageDesigs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMachines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMachines.Designer.cs">
+      <DependentUpon>ManageMachines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMaintenancePlans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMaintenancePlans.Designer.cs">
+      <DependentUpon>ManageMaintenancePlans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageShippingShedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageShippingShedules.Designer.cs">
+      <DependentUpon>ManageShippingShedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUserLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUserLogs.Designer.cs">
+      <DependentUpon>ManageUserLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufactLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufactLobbyChild.Designer.cs">
+      <DependentUpon>ManufactLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPassword.Designer.cs">
+      <DependentUpon>MasterPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MgmtLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MgmtLobbyChild.Designer.cs">
+      <DependentUpon>MgmtLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Buyer.cs" />
+    <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\DeptDesig.cs" />
+    <Compile Include="Models\Designation.cs" />
+    <Compile Include="Models\LobbyData.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItemContentComboBoxData.cs" />
+    <Compile Include="Models\OrderItemStatusCount.cs" />
+    <Compile Include="Models\ResetToken.cs" />
+    <Compile Include="Models\ShippingDetails.cs" />
+    <Compile Include="Models\TeabagMaterial.cs" />
+    <Compile Include="Models\UserAccount.cs" />
+    <Compile Include="ReportMachineViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMachineViewer.Designer.cs">
+      <DependentUpon>ReportMachineViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerEmployeeDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerEmployeeDetailsReport.Designer.cs">
+      <DependentUpon>ReportViewerEmployeeDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerMachineIssueStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerMachineIssueStatus.Designer.cs">
+      <DependentUpon>ReportViewerMachineIssueStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerManufacturingStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerManufacturingStatus.Designer.cs">
+      <DependentUpon>ReportViewerManufacturingStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerOrderItemContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerOrderItemContents.Designer.cs">
+      <DependentUpon>ReportViewerOrderItemContents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerScheduledShipmentStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerScheduledShipmentStatus.Designer.cs">
+      <DependentUpon>ReportViewerScheduledShipmentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerStorageStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerStorageStatus.Designer.cs">
+      <DependentUpon>ReportViewerStorageStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerTeaProductsAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerTeaProductsAvailability.Designer.cs">
+      <DependentUpon>ReportViewerTeaProductsAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetUserPasswordNewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetUserPasswordNewPassword.Designer.cs">
+      <DependentUpon>ResetUserPasswordNewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetUserPasswordSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetUserPasswordSuccess.Designer.cs">
+      <DependentUpon>ResetUserPasswordSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetUserPasswordVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetUserPasswordVerification.Designer.cs">
+      <DependentUpon>ResetUserPasswordVerification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerSettings.Designer.cs">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipLobbyChild.Designer.cs">
+      <DependentUpon>ShipLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartNewCargoLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartNewCargoLoading.Designer.cs">
+      <DependentUpon>StartNewCargoLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreLobbyChild.Designer.cs">
+      <DependentUpon>StoreLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\FormHandler.cs" />
+    <Compile Include="Utilities\FormStyler.cs" />
+    <Compile Include="HRLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRLobby.Designer.cs">
+      <DependentUpon>HRLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceLobby.Designer.cs">
+      <DependentUpon>MaintenanceLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrderItemContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrderItemContents.Designer.cs">
+      <DependentUpon>ManageOrderItemContents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageEmployees.Designer.cs">
+      <DependentUpon>ManageEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageIssues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageIssues.Designer.cs">
+      <DependentUpon>ManageIssues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageManufacturing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageManufacturing.Designer.cs">
+      <DependentUpon>ManageManufacturing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOrders.Designer.cs">
+      <DependentUpon>ManageOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProductionPlans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProductionPlans.Designer.cs">
+      <DependentUpon>ManageProductionPlans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProfile.Designer.cs">
+      <DependentUpon>ManageProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSecurity.Designer.cs">
+      <DependentUpon>ManageSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageShipping.Designer.cs">
+      <DependentUpon>ManageShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStorage.Designer.cs">
+      <DependentUpon>ManageStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTasks.Designer.cs">
+      <DependentUpon>ManageTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeabags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTeabags.Designer.cs">
+      <DependentUpon>ManageTeabags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeaProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTeaProducts.Designer.cs">
+      <DependentUpon>ManageTeaProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufactLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufactLobby.Designer.cs">
+      <DependentUpon>ManufactLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MgmtLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MgmtLobby.Designer.cs">
+      <DependentUpon>MgmtLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemContent.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeTasksReport.cs" />
+    <Compile Include="Models\FinishedGood.cs" />
+    <Compile Include="Models\FinishedGoodsReport.cs" />
+    <Compile Include="Models\LoadingChart.cs" />
+    <Compile Include="Models\Machine.cs" />
+    <Compile Include="Models\MachineIssue.cs" />
+    <Compile Include="Models\MachineryReport.cs" />
+    <Compile Include="Models\MaintenancePlan.cs" />
+    <Compile Include="Models\MaintenanceReport.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\ProductionPlan.cs" />
+    <Compile Include="Models\ShippedGood.cs" />
+    <Compile Include="Models\ShippingSchedule.cs" />
+    <Compile Include="Models\StorageProductVerificationReport.cs" />
+    <Compile Include="Models\StoredGood.cs" />
+    <Compile Include="Models\EmployeeTask.cs" />
+    <Compile Include="Models\TeaProduct.cs" />
+    <Compile Include="Models\TeaProductReport.cs" />
+    <Compile Include="ProductionLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionLobby.Designer.cs">
+      <DependentUpon>ProductionLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionLobbyChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionLobbyChild.Designer.cs">
+      <DependentUpon>ProductionLobbyChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestReports.Designer.cs">
+      <DependentUpon>RequestReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetUserPassword.Designer.cs">
+      <DependentUpon>ResetUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipLobby.Designer.cs">
+      <DependentUpon>ShipLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreLobby.Designer.cs">
+      <DependentUpon>StoreLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ImageTools.cs" />
+    <Compile Include="Utilities\MailHandler.cs" />
+    <Compile Include="Utilities\MSSMUIException.cs" />
+    <Compile Include="Utilities\NotificationManager.cs" />
+    <Compile Include="Utilities\PasswordHasher.cs" />
+    <Compile Include="Utilities\ResetTokenGenerator.cs" />
+    <Compile Include="Utilities\SessionManager.cs" />
+    <Compile Include="Utilities\ValidationHandler.cs" />
+    <Compile Include="ViewMaintenanceLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMaintenanceLogs.Designer.cs">
+      <DependentUpon>ViewMaintenanceLogs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDepartments.resx">
+      <DependentUpon>AddDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDesignations.resx">
+      <DependentUpon>AddDesignations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFinishedGoods.resx">
+      <DependentUpon>AddFinishedGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIssue.resx">
+      <DependentUpon>AddIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemsToStore.resx">
+      <DependentUpon>AddItemsToStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMachines.resx">
+      <DependentUpon>AddMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMaintenancePlan.resx">
+      <DependentUpon>AddMaintenancePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewBrand.resx">
+      <DependentUpon>AddNewBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewBuyer.resx">
+      <DependentUpon>AddNewBuyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrderItemContents.resx">
+      <DependentUpon>AddOrderItemContents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewOrder.resx">
+      <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewTask.resx">
+      <DependentUpon>AddNewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProductionPlan.resx">
+      <DependentUpon>AddProductionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddShippingSchedules.resx">
+      <DependentUpon>AddShippingSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeabagMaterial.resx">
+      <DependentUpon>AddTeabagMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeaProducts.resx">
+      <DependentUpon>AddTeaProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLobby.resx">
+      <DependentUpon>AdminLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLobbyChild.resx">
+      <DependentUpon>AdminLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppearanceSettings.resx">
+      <DependentUpon>AppearanceSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignTask.resx">
+      <DependentUpon>AssignTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionSettings.resx">
+      <DependentUpon>ConnectionSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditConnectionSettings.resx">
+      <DependentUpon>EditConnectionSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRLobby.resx">
+      <DependentUpon>HRLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRLobbyChild.resx">
+      <DependentUpon>HRLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueGoods.resx">
+      <DependentUpon>IssueGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceLobby.resx">
+      <DependentUpon>MaintenanceLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceLobbyChild.resx">
+      <DependentUpon>MaintenanceLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAssignedTasks.resx">
+      <DependentUpon>ManageAssignedTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBrands.resx">
+      <DependentUpon>ManageBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBuyers.resx">
+      <DependentUpon>ManageBuyers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrderItemContents.resx">
+      <DependentUpon>ManageOrderItemContents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCargoLoading.resx">
+      <DependentUpon>ManageCargoLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDepts.resx">
+      <DependentUpon>ManageDepts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDesigs.resx">
+      <DependentUpon>ManageDesigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageEmployees.resx">
+      <DependentUpon>ManageEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageIssues.resx">
+      <DependentUpon>ManageIssues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMachines.resx">
+      <DependentUpon>ManageMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMaintenancePlans.resx">
+      <DependentUpon>ManageMaintenancePlans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageManufacturing.resx">
+      <DependentUpon>ManageManufacturing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOrders.resx">
+      <DependentUpon>ManageOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProductionPlans.resx">
+      <DependentUpon>ManageProductionPlans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProfile.resx">
+      <DependentUpon>ManageProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSecurity.resx">
+      <DependentUpon>ManageSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageShipping.resx">
+      <DependentUpon>ManageShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageShippingShedules.resx">
+      <DependentUpon>ManageShippingShedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStorage.resx">
+      <DependentUpon>ManageStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTasks.resx">
+      <DependentUpon>ManageTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeabags.resx">
+      <DependentUpon>ManageTeabags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeaProducts.resx">
+      <DependentUpon>ManageTeaProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufactLobby.resx">
+      <DependentUpon>ManufactLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufactLobbyChild.resx">
+      <DependentUpon>ManufactLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPassword.resx">
+      <DependentUpon>MasterPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MgmtLobby.dje.resx">
+      <DependentUpon>MgmtLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MgmtLobby.resx">
+      <DependentUpon>MgmtLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MgmtLobby.vai.resx">
+      <DependentUpon>MgmtLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MgmtLobbyChild.resx">
+      <DependentUpon>MgmtLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionLobby.resx">
+      <DependentUpon>ProductionLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionLobbyChild.resx">
+      <DependentUpon>ProductionLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMachineViewer.resx">
+      <DependentUpon>ReportMachineViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerEmployeeDetailsReport.resx">
+      <DependentUpon>ReportViewerEmployeeDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerMachineIssueStatus.resx">
+      <DependentUpon>ReportViewerMachineIssueStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerManufacturingStatus.resx">
+      <DependentUpon>ReportViewerManufacturingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerOrderItemContents.resx">
+      <DependentUpon>ReportViewerOrderItemContents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerScheduledShipmentStatus.resx">
+      <DependentUpon>ReportViewerScheduledShipmentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerStorageStatus.resx">
+      <DependentUpon>ReportViewerStorageStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerTeaProductsAvailability.resx">
+      <DependentUpon>ReportViewerTeaProductsAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestReports.resx">
+      <DependentUpon>RequestReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetUserPassword.resx">
+      <DependentUpon>ResetUserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetUserPasswordNewPassword.resx">
+      <DependentUpon>ResetUserPasswordNewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetUserPasswordSuccess.resx">
+      <DependentUpon>ResetUserPasswordSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetUserPasswordVerification.resx">
+      <DependentUpon>ResetUserPasswordVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerSettings.resx">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipLobby.resx">
+      <DependentUpon>ShipLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipLobbyChild.resx">
+      <DependentUpon>ShipLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartNewCargoLoading.resx">
+      <DependentUpon>StartNewCargoLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreLobby.resx">
+      <DependentUpon>StoreLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreLobbyChild.resx">
+      <DependentUpon>StoreLobbyChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Working.ani" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2DBIG.ico" />
+    <None Include="Resources\avatar.PNG" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\change.png" />
+    <None Include="Resources\showpwbw.png" />
+    <None Include="Resources\showpw.png" />
+    <None Include="Resources\icons8_synchronize_96px.png" />
+    <None Include="Resources\icons8_approval_96px.png" />
+    <None Include="Resources\loaderrec.gif" />
+    <None Include="Resources\loadersq.gif" />
+    <None Include="Resources\Normal.cur" />
+    <None Include="Resources\Unavailable.cur" />
+    <None Include="Resources\addGreenSq.png" />
+    <None Include="Resources\addAshSq.png" />
+    <None Include="Resources\Busy.ani" />
+    <None Include="Resources\warnC2.png" />
+    <None Include="Resources\tickC2.png" />
+    <None Include="Resources\warnC3.png" />
+    <None Include="Resources\warnC.png" />
+    <None Include="Resources\closeC.png" />
+    <None Include="Resources\infoC.png" />
+    <None Include="Resources\tickC.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\loadingDR.gif" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\Fingerprint.PNG" />
+    <None Include="Resources\UserFlat.PNG" />
+    <None Include="Resources\Error.PNG" />
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

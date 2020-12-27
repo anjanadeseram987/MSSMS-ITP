@@ -1,0 +1,126 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MSSMS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MySQLUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JafferjeeBrothers</Value>
+    </Setting>
+    <Setting Name="MySQLPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="MySQLHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="MySQLDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mssmsdb</Value>
+    </Setting>
+    <Setting Name="MySQLPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="EMAILUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">jafferjeebrothersteadivision@gmail.com</Value>
+    </Setting>
+    <Setting Name="EMAILPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="DefaultAdmin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E2000001</Value>
+    </Setting>
+    <Setting Name="DefaultPhoneRegEx" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultEmailRegEx" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultTimeFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="DefaultPhoneRegion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WW</Value>
+    </Setting>
+    <Setting Name="SMTPHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="SMTPPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="SMTPSSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SMTPDefaultCredentials" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SMTPDeliveryMethod" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultTokenExpTime" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="DefaultMySQLUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JafferjeeBrothers</Value>
+    </Setting>
+    <Setting Name="DefaultMySQLPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="DefaultMySQLHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="DefaultMySQLPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3306</Value>
+    </Setting>
+    <Setting Name="MSSMMasterPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="DefaultMSSMMasterPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="DefaultSMTPHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="DefaultSMTPPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="DefaultSMTPSSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TokenExpTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="CurrentTimeFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="DefaultTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dark</Value>
+    </Setting>
+    <Setting Name="CurrentTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Light</Value>
+    </Setting>
+    <Setting Name="CurrentPhoneRegion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LK</Value>
+    </Setting>
+    <Setting Name="CurrentEmailRegEx" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CurrentPhoneRegEx" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultEMAILPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MSSM@JBDB</Value>
+    </Setting>
+    <Setting Name="DefaultEMAILUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">jafferjeebrothersteadivision@gmail.com</Value>
+    </Setting>
+    <Setting Name="DefaultMySQLDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mssmsdb</Value>
+    </Setting>
+    <Setting Name="MySQLPasswordSalt" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EMAILPasswordSalt" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmpMINAge" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

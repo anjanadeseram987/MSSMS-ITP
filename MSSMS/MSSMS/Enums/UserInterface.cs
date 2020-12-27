@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MSSMS.Enums
+{
+    public enum UserInterface
+    {
+        NOTSET,
+        ADMIN,
+        GENERALMANAGER,
+        PRODUCTIONMANAGER,
+        ENGINEER,
+        FGOPERATOR,
+        STOREKEEPER,
+        SHIPPINGMANAGER,
+        HRMANAGER
+    }
+}
